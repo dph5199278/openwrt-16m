@@ -139,7 +139,9 @@ echo '===== 修改主机名成功'
 
 echo '===== 修改默认主题...'
 ##### Set argon as default theme
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 echo '===== 修改默认主题成功'
 
 echo '===== 修改IP设置...'
