@@ -152,6 +152,14 @@ sed -i 's/192.168.1.1/192.168.128.127/g' feeds/luci/modules/luci-mod-system/htdo
 sed -i 's/immortalwrt.lan/tplogin.lan/g' feeds/luci/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
 echo '===== 修改IP设置成功'
 
+echo '===== 修改默认加密套件...'
+sed -i 's/libopenssl/libmbedtls/g' feeds/packages/net/smartdns/Makefile
+sed -i 's/t PACKAGE_luci-lib-nixio_openssl/t PACKAGE_luci-lib-nixio_axtls/g' feeds/luci/libs/luci-lib-nixio/Makefile
+sed -i 's/t LIBCURL_OPENSSL/t LIBCURL_MBEDTLS/g' feeds/packages/net/curl/Config.in
+sed -i 's/libustream-openssl/libustream-mbedtls/g' include/target.mk
+sed -i 's/wpad-basic-openssl/wpad-basic-mbedtls/g' target/linux/ath79/tiny/target.mk
+echo '===== 修改默认加密套件成功'
+
 
 # 移除不用软件包
 # rm -rf feeds/luci/applications/luci-app-netdata
