@@ -153,7 +153,7 @@ sed -i 's/immortalwrt.lan/tplogin.lan/g' feeds/luci/modules/luci-mod-system/htdo
 echo '===== 修改IP设置成功'
 
 echo '===== 修改默认加密套件...'
-sed -i 's/libopenssl/libmbedtls/g' feeds/packages/net/smartdns/Makefile
+sed -i 's/libopenssl/libwolfssl/g' feeds/packages/net/smartdns/Makefile
 sed -i 's/t PACKAGE_luci-lib-nixio_openssl/t PACKAGE_luci-lib-nixio_axtls/g' feeds/luci/libs/luci-lib-nixio/Makefile
 sed -i 's/t LIBCURL_OPENSSL/t LIBCURL_MBEDTLS/g' feeds/packages/net/curl/Config.in
 sed -i 's/libustream-openssl/libustream-mbedtls/g' include/target.mk
