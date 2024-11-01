@@ -137,6 +137,10 @@ echo '===== 修改主机名...'
 sed -i "s/hostname='ImmortalWrt'/hostname='TL-WR882N'/g" package/base-files/files/bin/config_generate
 echo '===== 修改主机名成功'
 
+echo '===== 修改SSID...'
+sed -i "s/ImmortalWrt/TL-WR882N/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+echo '===== 修改SSID成功'
+
 echo '===== 修改默认主题...'
 ##### Set argon as default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
