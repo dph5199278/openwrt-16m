@@ -8,7 +8,7 @@ echo 'define Device/tplink_tl-wr886n-v5' >> target/linux/ath79/image/tiny-tp-lin
 echo '  $(Device/tplink-16mlzma)' >> target/linux/ath79/image/tiny-tp-link.mk
 echo '  SOC := tp9343' >> target/linux/ath79/image/tiny-tp-link.mk
 echo '  DEVICE_MODEL := TL-WR886N' >> target/linux/ath79/image/tiny-tp-link.mk
-echo '  DEVICE_VARIANT := v1' >> target/linux/ath79/image/tiny-tp-link.mk
+echo '  DEVICE_VARIANT := v5' >> target/linux/ath79/image/tiny-tp-link.mk
 echo '  TPLINK_HWID := 0x08860005' >> target/linux/ath79/image/tiny-tp-link.mk
 echo '  SUPPORTED_DEVICES += tl-wr886n-v5' >> target/linux/ath79/image/tiny-tp-link.mk
 echo 'endef' >> target/linux/ath79/image/tiny-tp-link.mk
