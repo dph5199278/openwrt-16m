@@ -203,6 +203,9 @@ jobs:
         run: |
           echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >>$GITHUB_OUTPUT
           touch release.txt
+          echo "访问 http://tplogin.lan 进入界面" >> release.txt
+          echo "用户名：root" >> release.txt
+          echo "默认密码不用填，直接登录" >> release.txt
           echo "status=success" >>$GITHUB_OUTPUT
 
       - name: Upload firmware to release

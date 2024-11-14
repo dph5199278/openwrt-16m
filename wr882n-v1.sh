@@ -150,9 +150,8 @@ echo '===== 修改默认主题成功'
 
 echo '===== 修改IP设置...'
 # Modify default IP 
-sed -i 's/192.168.1.1/192.168.128.127/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.128.127/g' feeds/luci/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
-sed -i 's/192.168.1.1/192.168.128.127/g' feeds/luci/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
+sed -i 's/192.168.1.1/192.168.255.127/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.255.127/g' feeds/luci/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
 sed -i 's/immortalwrt.lan/tplogin.lan/g' feeds/luci/modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js
 echo '===== 修改IP设置成功'
 
