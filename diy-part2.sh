@@ -12,3 +12,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+# remove kmod-usb-net-rtl8150
+sed -i 's/kmod-usb-net-rtl8150//g' target/linux/x86/Makefile
+
+# remove kmod-usb-net-rtl8152-vendor
+sed -i 's/kmod-usb-net-rtl8152-vendor//g' target/linux/x86/Makefile
